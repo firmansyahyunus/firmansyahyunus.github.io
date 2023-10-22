@@ -2,25 +2,24 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: 'Balancing Faith, Life, and Career: A Journey of Purpose.'
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  more_info: 
 
-news: true  # includes a list of news items
+news: false  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Greetings, dear readers! I am [Your Name], and I welcome you to my digital abode where technology, spirituality, and the quest for purpose converge. As a passionate software developer, I've spent countless hours crafting lines of code, seeking elegant solutions to complex problems, and contributing to the ever-evolving landscape of technology.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+But beyond the world of algorithms and syntax, I'm also an explorer of faith and a seeker of life's deeper meaning. I believe that the journey to find purpose is a profound one, and I've dedicated my life to balancing my unwavering faith, the ever-unfolding tapestry of existence, and my career as a software artisan.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Connect with me on social media:
+
+[LinkedIn](https://id.linkedin.com/in/firmansyah-junus)
