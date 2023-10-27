@@ -111,9 +111,26 @@ namespace ShopCart.Api.Entities
 9. Entity Relationship Diagram
 ![ERD]({{site.baseurl}}/_posts/27.10.2023_23.26.48_REC.png)
 
-10. Tambah Dependency library melalui Nuget Package, install versi 6
+10. Tambah dependency library melalui Nuget Package pada project ShoptCart.Api, install versi 6
 	`Microsoft.EntityFrameworkCore.SqlServer`
     `Microsoft.EntityFrameworkCore.Tools`
+
+11. Tambahkan ConnectionString untuk koneksi ke Database SQL pada file appsettings.json
+`appsettings.json`
+```json
+{
+  "ConnectionStrings": {
+    "ShopCartConnection": "Server=LOCALSERVER;Database=ShopCart;Truested_Connection=True"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
 
 
 
