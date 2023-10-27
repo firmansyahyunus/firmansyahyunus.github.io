@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor WebAssembly & Web API on .NET 6
+title: 'Blazor WebAssembly & Web API on .NET 6 C# (Part 1)'
 date: '2023-10-20 09:56:00-0400'
 description: >-
   Learn Blazor WebAssembly and Web API on .NET 6 by building a shopping cart
