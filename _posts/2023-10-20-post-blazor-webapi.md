@@ -120,7 +120,7 @@ namespace ShopCart.Api.Entities
 
 {
   "ConnectionStrings": {
-    "ShopCartConnection": "Server=FKSMS-FIRMANSYA\\MSSQLSERVER16DEV;Database=ShopCart;Truested_Connection=True"
+    "ShopCartConnection": "Server=MYLOCAL;Database=ShopCart;Trusted_Connection=True"
   },
   "Logging": {
     "LogLevel": {
@@ -494,10 +494,12 @@ app.MapControllers();
 app.Run();
 
 ```
-Covered :
-- Create the Database using EF Core Code First Database Migrations
-- Retrieve Product Data from Database (Web API component)
-- Create Classes for Data Transfer Objects (DTOs)
-- Create ProductRepository Class (Repository Design Pattern)
-- Create ProductController Class
-- Create DtoConversion Class (DTO Conversion Extension methods)
+
+14. Generate Migration EF Core, menggunakan Package Manager Console, di Menu Tools - Nuget Package Manager
+15. Ketik code berikut untuk menjalankan migrasi EF Core ke database dan pilihdefault Project ke ShopCart.Api
+	`Add-Migration InitialCreate`
+    `Update-Database'
+
+![Package Manager Console]({{site.baseurl}}/_posts/28.10.2023_00.12.15_REC.png)
+
+16.
