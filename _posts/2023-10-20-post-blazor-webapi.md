@@ -117,6 +117,7 @@ namespace ShopCart.Api.Entities
 
 11. Tambahkan ConnectionString untuk koneksi ke Database SQL pada file appsettings.json
 `appsettings.json`
+<pre><code>
 ```
 {
   "ConnectionStrings": {
@@ -131,7 +132,7 @@ namespace ShopCart.Api.Entities
   "AllowedHosts": "*"
 }
 ```
-
+<code><pre>
 
 
 Covered :
