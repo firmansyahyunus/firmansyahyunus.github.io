@@ -118,10 +118,10 @@ namespace ShopCart.Api.Entities
 11. Tambahkan ConnectionString untuk koneksi ke Database SQL pada file appsettings.json
 `appsettings.json`
 
-```
-> {
+```json
+{
   "ConnectionStrings": {
-    "ShopCartConnection": "Server=LOCALSERVER;Database=ShopCart;Truested_Connection=True"
+    "ShopCartConnection": "Server=FKSMS-FIRMANSYA\\MSSQLSERVER16DEV;Database=ShopCart;Truested_Connection=True"
   },
   "Logging": {
     "LogLevel": {
