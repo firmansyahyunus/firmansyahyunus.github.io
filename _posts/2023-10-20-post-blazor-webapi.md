@@ -457,8 +457,43 @@ namespace ShopCart.Api.Data
 
 ```
 
+13. Tambahan pada Program.cs service koneksi ke SQLServer
+`Program.cs`
+```c#
+using Microsoft.EntityFrameworkCore;
+using ShopCart.Api.Data;
 
+var builder = WebApplication.CreateBuilder(args);
 
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<ShopCartDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ShopCartConnection"))
+    );
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+
+```
 Covered :
 - Create the Database using EF Core Code First Database Migrations
 - Retrieve Product Data from Database (Web API component)
