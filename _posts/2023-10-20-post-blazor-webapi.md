@@ -111,7 +111,9 @@ namespace ShopCart.Api.Entities
 9. Entity Relationship Diagram
 ![ERD]({{site.baseurl}}/_posts/27.10.2023_23.26.48_REC.png)
 
-
+10. Tambah Dependency library melalui Nuget Package, install versi 6
+	`Microsoft.EntityFrameworkCore.SqlServer`
+    `Microsoft.EntityFrameworkCore.Tools`
 
 
 
