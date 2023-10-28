@@ -17,24 +17,24 @@ Membuat aplikasi Shopping Cart dengan Blazor WebAssembly dan Web API di .NET 6 C
 Dalam artikel ini, kami akan membuat panduan melalui proses langkah demi langkah dalam membuat shopping cart interaktif menggunakan Web API di .NET 6 untuk mengelola data produk, keranjang belanja, dan transaksi.
 
 1. Buat Project, Pilih Blazor WebAssembly App
-![Blazor WebAssembly](<../assets/img/Blazor Web Api/27.10.2023_22.28.56_REC.png>)
+![Blazor WebAssembly](</assets/img/Blazor Web Api/27.10.2023_22.28.56_REC.png>)
 
 2. Ketik nama project  ShopCart.Web
-![ShopCart.Web](<../assets/img/Blazor Web Api/27.10.2023_22.39.59_REC.png>)
+![ShopCart.Web](</assets/img/Blazor Web Api/27.10.2023_22.39.59_REC.png>)
 
 3. Pilih Framework .NET 6
-![.NET 6](<../assets/img/Blazor Web Api/27.10.2023_22.41.07_REC.png>)
+![.NET 6](</assets/img/Blazor Web Api/27.10.2023_22.41.07_REC.png>)
 
 4. Add New Project pada Solution, klik kanan ke Solution -> Add -> New Project
-![Add New Project](<../assets/img/Blazor Web Api/Screenshot 2023-10-27 225341.png>)
+![Add New Project](</assets/img/Blazor Web Api/Screenshot 2023-10-27 225341.png>)
 
 5. Pilih Project ASP.NET Core Web API
-![Web API Project](<../assets/img/Blazor Web Api/27.10.2023_22.55.36_REC.png>)
+![Web API Project](</assets/img/Blazor Web Api/27.10.2023_22.55.36_REC.png>)
 
 6. Buat nama project ShopCart.Api
 
 7. Pilih Framework .Net 6, Authentication Type None
-![NET 6](<../assets/img/Blazor Web Api/27.10.2023_23.05.20_REC.png>)
+![NET 6](</assets/img/Blazor Web Api/27.10.2023_23.05.20_REC.png>)
 
 
 8. Buat File berikut pada Shop.Api Project, Folder Entities
@@ -109,7 +109,7 @@ namespace ShopCart.Api.Entities
 ```
 
 9. Entity Relationship Diagram
-![ERD](<../assets/img/Blazor Web Api/27.10.2023_23.26.48_REC.png>)
+![ERD](</assets/img/Blazor Web Api/27.10.2023_23.26.48_REC.png>)
 
 10. Tambah dependency library melalui Nuget Package pada project ShoptCart.Api, install versi 6
 	`Microsoft.EntityFrameworkCore.SqlServer`
@@ -499,24 +499,24 @@ app.Run();
 15. Ketik code berikut untuk menjalankan migrasi EF Core ke database dan pilihdefault Project ke ShopCart.Api
 	`Add-Migration InitialCreate`
     `Update-Database'
-![Package Manager Console](<../assets/img/Blazor Web Api/28.10.2023_00.12.15_REC.png>)
+![Package Manager Console](</assets/img/Blazor Web Api/28.10.2023_00.12.15_REC.png>)
 
 16. Hasil migrasi pada database SQL ShopCart
     
-![Database](<../assets/img/Blazor Web Api/28.10.2023_11.39.51_REC.png>)
+![Database](</assets/img/Blazor Web Api/28.10.2023_11.39.51_REC.png>)
 
 Progres sampai saat ini <br>
 Table Users
-![Alt text](<../assets/img/Blazor Web Api/28.10.2023_23.51.31_REC.png>)
+![Alt text](</assets/img/Blazor Web Api/28.10.2023_23.51.31_REC.png>)
 
 Table Products
-![Alt text](<../assets/img/Blazor Web Api/28.10.2023_23.55.49_REC.png>)
+![Alt text](</assets/img/Blazor Web Api/28.10.2023_23.55.49_REC.png>)
 
 Table ProductCategories
-![Alt text](<../assets/img/Blazor Web Api/28.10.2023_23.52.25_REC.png>)
+![Alt text](</assets/img/Blazor Web Api/28.10.2023_23.52.25_REC.png>)
 
 Table Cart
-![Alt text](<../assets/img/Blazor Web Api/28.10.2023_23.52.58_REC.png>)
+![Alt text](</assets/img/Blazor Web Api/28.10.2023_23.52.58_REC.png>)
 
 Struktur Project Solution <br>
-![Alt text](<../assets/img/Blazor Web Api/29.10.2023_00.01.00_REC.png>)
+![Alt text](</assets/img/Blazor Web Api/29.10.2023_00.01.00_REC.png>)

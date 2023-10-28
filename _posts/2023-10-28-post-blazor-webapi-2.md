@@ -21,11 +21,11 @@ Dalam artikel ini, kami akan membuat panduan melalui proses langkah demi langkah
 Pilih ClassLibrary
 beri nama project ShopCart.Models
 pilih Framework .NET 6
-![ShopCart.Models](<../assets/img/Blazor Web Api/28.10.2023_11.51.07_REC.png>)
+![ShopCart.Models](</assets/img/Blazor Web Api/28.10.2023_11.51.07_REC.png>)
 
 
 2. Buat file berikut pada Shop.Models project, folder Dtos
-![Alt text](<../assets/img/Blazor Web Api/28.10.2023_12.04.03_REC.png>)
+![Alt text](</assets/img/Blazor Web Api/28.10.2023_12.04.03_REC.png>)
 
 `CartItemDto.cs`
 ```c#
@@ -150,7 +150,7 @@ namespace ShopCart.Api.Repositories
 ```
 4. Tambahkan kode independency injection berikut pada file Program.cs agar repository bisa digunakan.
 `builder.Services.AddScoped<IProductRepository, ProductRepository>();`
-![Alt text](<../assets/img/Blazor Web Api/29.10.2023_00.41.17_REC.png>)
+![Alt text](</assets/img/Blazor Web Api/29.10.2023_00.41.17_REC.png>)
 
 5. Buat Folder Extensions, dan didalamnya buat file DtoConversions.cs, file ini digunakan untuk konversi hasil data dari database ke Swagger UI.
 
@@ -239,12 +239,12 @@ namespace ShopCart.Api.Controllers
 ```  
 
 7. Jalankan Project Solution pilih Menu Debug -> Start Debugging atau dengan shortcut F5 pada keyboard, maka akan tampil halaman Swagger, Product dan Method Get /api/Product, karena sebelumnya sudah dibuat pada Step 6, file ProductController.cs 
-![Alt text](<../assets/img/Blazor Web Api/29.10.2023_01.14.51_REC.png>)
+![Alt text](</assets/img/Blazor Web Api/29.10.2023_01.14.51_REC.png>)
 
 Coba jalankan method Get /api/Product dengan cara, Pilih Try it out -> Pilih Execute,
 maka data product akan tampil <br>
 
-![Alt text](<../assets/img/Blazor Web Api/29.10.2023_01.24.41_REC.png>)
+![Alt text](</assets/img/Blazor Web Api/29.10.2023_01.24.41_REC.png>)
 
 Struktur Project Solution <br>
-![Alt text](<../assets/img/Blazor Web Api/29.10.2023_01.30.56_REC.png>)
+![Alt text](</assets/img/Blazor Web Api/29.10.2023_01.30.56_REC.png>)
