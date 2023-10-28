@@ -504,3 +504,19 @@ app.Run();
 16. Hasil migrasi pada database SQL ShopCart
     
 ![Database](<../assets/img/Blazor Web Api/28.10.2023_11.39.51_REC.png>)
+
+Progres sampai saat ini <br>
+Table Users
+![Alt text](<../assets/img/Blazor Web Api/28.10.2023_23.51.31_REC.png>)
+
+Table Products
+![Alt text](<../assets/img/Blazor Web Api/28.10.2023_23.55.49_REC.png>)
+
+Table ProductCategories
+![Alt text](<../assets/img/Blazor Web Api/28.10.2023_23.52.25_REC.png>)
+
+Table Cart
+![Alt text](<../assets/img/Blazor Web Api/28.10.2023_23.52.58_REC.png>)
+
+Struktur Project Solution <br>
+![Alt text](<../assets/img/Blazor Web Api/29.10.2023_00.01.00_REC.png>)
