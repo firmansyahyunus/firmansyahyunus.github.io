@@ -17,13 +17,29 @@ Membuat aplikasi Shopping Cart dengan Blazor WebAssembly dan Web API di .NET 6 C
 Dalam artikel ini, kami akan membuat panduan melalui proses langkah demi langkah dalam membuat shopping cart interaktif menggunakan Web API di .NET 6 untuk mengelola data produk, keranjang belanja, dan transaksi.
 
 1. Buat Project, Pilih Blazor WebAssembly App
-![Blazor WebAssembly](</assets/img/Blazor Web Api/27.10.2023_22.28.56_REC.png>)
+
+
+<div class="row-mt-3">
+        <img src="../assets/img/Blazor Web Api/27.10.2023_22.28.56_REC.png" alt="ERD" style="max-width:30%; height:auto;
+        class="img-fluid rounded z-depth-1" zoomable=true
+        >
+</div>
 
 2. Ketik nama project  ShopCart.Web
-![ShopCart.Web](</assets/img/Blazor Web Api/27.10.2023_22.39.59_REC.png>)
+
+<div class="row-mt-3">
+        <img src="../assets/img/Blazor Web Api/27.10.2023_22.39.59_REC.png" alt="ERD" style="max-width:30%; height:auto;
+        class="img-fluid rounded z-depth-1" zoomable=true
+        >
+</div>
 
 3. Pilih Framework .NET 6
-![.NET 6](</assets/img/Blazor Web Api/27.10.2023_22.41.07_REC.png>)
+
+<div class="row-mt-3">
+        <img src="../assets/img/Blazor Web Api/27.10.2023_22.41.07_REC.png" alt="ERD" style="max-width:30%; height:auto;
+        class="img-fluid rounded z-depth-1" zoomable=true
+        >
+</div>
 
 4. Add New Project pada Solution, klik kanan ke Solution -> Add -> New Project
 ![Add New Project](</assets/img/Blazor Web Api/Screenshot 2023-10-27 225341.png>)
