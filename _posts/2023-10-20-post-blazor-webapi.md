@@ -6,60 +6,56 @@ description: >-
   Learn Blazor WebAssembly and Web API on .NET 6 by building a shopping cart
   application using C#
 tags: false
-categories: sample-posts
+categories: blazor-posts
 giscus_comments: false
 related_posts: false
 related_publications: false
 published: true
+toc:
+  sidebar: left
 ---
 Membuat aplikasi Shopping Cart dengan Blazor WebAssembly dan Web API di .NET 6 C#
 
 Dalam artikel ini, kami akan membuat panduan melalui proses langkah demi langkah dalam membuat shopping cart interaktif menggunakan Web API di .NET 6 untuk mengelola data produk, keranjang belanja, dan transaksi.
 
-1. Buat Project, Pilih Blazor WebAssembly App
 
-
+## Buat Project Blazor WebAssembly App
+{:data-toc-text="Buat Project Blazor WebAssembly App"}
 
 <div class="row mt-3">
-        {% include figure.html path="assets/img/Blazor Web Api/27.10.2023_22.28.56_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+   {% include figure.html path="assets/img/Blazor Web Api/27.10.2023_22.28.56_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
-
-<div class="row-mt-3">
-        <img src="../assets/img/Blazor Web Api/27.10.2023_22.28.56_REC.png" alt="ERD" style="max-width:30%; height:auto;
-        class="img-fluid rounded z-depth-1" zoomable=true
-        >
+### Buat nama project ShopCart.Web
+<div class="row mt-3">
+   {% include figure.html path="assets/img/Blazor Web Api/27.10.2023_22.39.59_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
-2. Ketik nama project  ShopCart.Web
-
-<div class="row-mt-3">
-        <img src="../assets/img/Blazor Web Api/27.10.2023_22.39.59_REC.png" alt="ERD" style="max-width:30%; height:auto;
-        class="img-fluid rounded z-depth-1" zoomable=true
-        >
+### Pilih Framework .NET 6
+<div class="row mt-3">
+   {% include figure.html path="assets/img/Blazor Web Api/27.10.2023_22.41.07_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
-3. Pilih Framework .NET 6
-
-<div class="row-mt-3">
-        <img src="../assets/img/Blazor Web Api/27.10.2023_22.41.07_REC.png" alt="ERD" style="max-width:30%; height:auto;
-        class="img-fluid rounded z-depth-1" zoomable=true
-        >
+## Buat Project baru pada Solution yang sama
+{:data-toc-text="Buat Project ASP.NET Core Web API"}
+klik kanan ke Solution -> Add -> New Project
+<div class="row mt-3">
+        {% include figure.html path="assets/img/Blazor Web Api/Screenshot 2023-10-27 225341.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
-4. Add New Project pada Solution, klik kanan ke Solution -> Add -> New Project
-![Add New Project](</assets/img/Blazor Web Api/Screenshot 2023-10-27 225341.png>)
+### Pilih Project ASP.NET Core Web API
+<div class="row mt-3">
+        {% include figure.html path="assets/img/Blazor Web Api/27.10.2023_22.55.36_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
 
-5. Pilih Project ASP.NET Core Web API
-![Web API Project](</assets/img/Blazor Web Api/27.10.2023_22.55.36_REC.png>)
+### Buat nama project ShopCart.Api
+Pilih Framework .Net 6, Authentication Type None
+<div class="row mt-3">
+        {% include figure.html path="assets/img/Blazor Web Api/27.10.2023_23.05.20_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
 
-6. Buat nama project ShopCart.Api
-
-7. Pilih Framework .Net 6, Authentication Type None
-![NET 6](</assets/img/Blazor Web Api/27.10.2023_23.05.20_REC.png>)
-
-
-8. Buat File berikut pada Shop.Api Project, Folder Entities
+## Buat class model entities
+Buat class berikut pada Shop.Api Project, Folder Entities
 
 `Cart.cs`
 ```c#
@@ -130,16 +126,22 @@ namespace ShopCart.Api.Entities
 
 ```
 
-9. Entity Relationship Diagram
-![ERD](</assets/img/Blazor Web Api/27.10.2023_23.26.48_REC.png>)
+## ERD
+Entity Relationship Diagram
+<div class="row mt-3">
+        {% include figure.html path="assets/img/Blazor Web Api/27.10.2023_23.26.48_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
 
-10. Tambah dependency library melalui Nuget Package pada project ShoptCart.Api, install versi 6
-	`Microsoft.EntityFrameworkCore.SqlServer`
-    `Microsoft.EntityFrameworkCore.Tools`
 
-11. Tambahkan ConnectionString untuk koneksi ke Database SQL pada file appsettings.json
+## Tambah library nuget 
+Tambah dependency library melalui Nuget Package pada project ShoptCart.Api, install versi 6
+`Microsoft.EntityFrameworkCore.SqlServer`
+`Microsoft.EntityFrameworkCore.Tools`
+
+## Tambah connectionString
+Tambahkan ConnectionString untuk koneksi ke Database SQL pada file appsettings.json
 `appsettings.json`
-
+```yml
 {
   "ConnectionStrings": {
     "ShopCartConnection": "Server=MYLOCAL;Database=ShopCart;Trusted_Connection=True"
@@ -152,8 +154,10 @@ namespace ShopCart.Api.Entities
   },
   "AllowedHosts": "*"
 }
+```
 
-12. Buat file datacontext pada project Api dan folder Data
+## Tambah datacontext
+Buat file datacontext pada project Api dan folder Data
 `ShopCartDbContext.cs`
 ```c#
 using Microsoft.EntityFrameworkCore;
@@ -479,7 +483,8 @@ namespace ShopCart.Api.Data
 
 ```
 
-13. Tambahan pada Program.cs service koneksi ke SQLServer
+## Tambah service SQL Server
+Tambahan code pada Program.cs service koneksi ke SQLServer
 `Program.cs`
 ```c#
 using Microsoft.EntityFrameworkCore;
@@ -517,28 +522,45 @@ app.Run();
 
 ```
 
-14. Generate Migration EF Core, menggunakan Package Manager Console, di Menu Tools - Nuget Package Manager
-15. Ketik code berikut untuk menjalankan migrasi EF Core ke database dan pilihdefault Project ke ShopCart.Api
-	`Add-Migration InitialCreate`
-    `Update-Database'
-![Package Manager Console](</assets/img/Blazor Web Api/28.10.2023_00.12.15_REC.png>)
+## Menggunakan migration EF Core
+Untuk generate Migration EF Core, menggunakan Package Manager Console, di Menu Tools - Nuget Package Manager
+Ketik code berikut untuk menjalankan migrasi EF Core ke database dan pilihdefault Project ke ShopCart.Api
 
-16. Hasil migrasi pada database SQL ShopCart
-    
-![Database](</assets/img/Blazor Web Api/28.10.2023_11.39.51_REC.png>)
+`Add-Migration InitialCreate`
+`Update-Database`
+
+<div class="row mt-3">
+    {% include figure.html path="assets/img/Blazor Web Api/28.10.2023_00.12.15_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
+
+## Hasil migrasi pada database SQL ShopCart
+
+<div class="row mt-3">
+    {% include figure.html path="assets/img/Blazor Web Api/28.10.2023_11.39.51_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>    
 
 Progres sampai saat ini <br>
 Table Users
-![Alt text](</assets/img/Blazor Web Api/28.10.2023_23.51.31_REC.png>)
+<div class="row mt-3">
+    {% include figure.html path="assets/img/Blazor Web Api/28.10.2023_23.51.31_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>   
 
 Table Products
-![Alt text](</assets/img/Blazor Web Api/28.10.2023_23.55.49_REC.png>)
+<div class="row mt-3">
+    {% include figure.html path="assets/img/Blazor Web Api/28.10.2023_23.55.49_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>   
 
 Table ProductCategories
-![Alt text](</assets/img/Blazor Web Api/28.10.2023_23.52.25_REC.png>)
+<div class="row mt-3">
+    {% include figure.html path="assets/img/Blazor Web Api/28.10.2023_23.52.25_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>   
 
 Table Cart
-![Alt text](</assets/img/Blazor Web Api/28.10.2023_23.52.58_REC.png>)
+<div class="row mt-3">
+    {% include figure.html path="assets/img/Blazor Web Api/28.10.2023_23.52.58_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>   
 
 Struktur Project Solution <br>
-![Alt text](</assets/img/Blazor Web Api/29.10.2023_00.01.00_REC.png>)
+<div class="row mt-3">
+    {% include figure.html path="assets/img/Blazor Web Api/29.10.2023_00.01.00_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>   
