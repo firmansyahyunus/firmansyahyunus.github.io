@@ -19,15 +19,11 @@ Dalam artikel ini, kami akan membuat panduan melalui proses langkah demi langkah
 1. Buat Project, Pilih Blazor WebAssembly App
 
 <div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/9.jpg" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/7.jpg" class="img-fluid rounded z-depth-1" %}
-    </div>
+        {% include figure.html path="assets/img/Blazor Web Api/27.10.2023_22.28.56_REC.png" class="img-fluid rounded z-depth-1" zoomable=true max-width height:auto %}
 </div>
-<div class="caption">
-    A simple, elegant caption looks good between image rows, after each row, or doesn't have to be there at all.
+
+<div class="row mt-3">
+        {% include figure.html path="assets/img/Blazor Web Api/27.10.2023_22.28.56_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
 
