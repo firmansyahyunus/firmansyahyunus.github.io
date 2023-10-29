@@ -18,9 +18,7 @@ Dalam artikel ini, kami akan membuat panduan melalui proses langkah demi langkah
 
 1. Buat Project, Pilih Blazor WebAssembly App
 
-<div class="row mt-3">
-        {% include figure.html path="assets/img/Blazor Web Api/27.10.2023_22.28.56_REC.png" class="img-fluid rounded z-depth-1" zoomable=true max-width height:auto %}
-</div>
+
 
 <div class="row mt-3">
         {% include figure.html path="assets/img/Blazor Web Api/27.10.2023_22.28.56_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
