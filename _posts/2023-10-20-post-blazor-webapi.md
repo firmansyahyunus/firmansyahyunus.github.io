@@ -534,7 +534,6 @@ Ketik code berikut untuk menjalankan migrasi EF Core ke database dan pilihdefaul
 </div>
 
 ## Hasil migrasi pada database SQL ShopCart
-
 <div class="row mt-3">
     {% include figure.html path="assets/img/Blazor Web Api/28.10.2023_11.39.51_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>    
@@ -560,7 +559,7 @@ Table Cart
     {% include figure.html path="assets/img/Blazor Web Api/28.10.2023_23.52.58_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>   
 
-Struktur Project Solution <br>
+## Struktur Project Solution <br>
 <div class="row mt-3">
     {% include figure.html path="assets/img/Blazor Web Api/29.10.2023_00.01.00_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>   

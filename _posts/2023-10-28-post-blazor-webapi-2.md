@@ -6,26 +6,32 @@ description: >-
   Learn Blazor WebAssembly and Web API on .NET 6 by building a shopping cart
   application using C#
 tags: false
-categories: sample-posts
+categories: blazor-posts
 giscus_comments: false
 related_posts: false
 related_publications: false
 published: true
+toc:
+  sidebar: left
 ---
 Membuat aplikasi Shopping Cart dengan Blazor WebAssembly dan Web API di .NET 6 C#
 
 Dalam artikel ini, kami akan membuat panduan melalui proses langkah demi langkah dalam membuat shopping cart interaktif menggunakan Web API di .NET 6 untuk mengelola data produk, keranjang belanja, dan transaksi.
 
-
-1. Buat Project baru untuk Model Class Library
+## Buat Project baru untuk Model Class Library
+{:data-toc-text="Buat Project Model Class Library"}
 Pilih ClassLibrary
 beri nama project ShopCart.Models
 pilih Framework .NET 6
-![ShopCart.Models](</assets/img/Blazor Web Api/28.10.2023_11.51.07_REC.png>)
+<div class="row mt-3">
+   {% include figure.html path="assets/img/Blazor Web Api/28.10.2023_11.51.07_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
 
-
-2. Buat file berikut pada Shop.Models project, folder Dtos
-![Alt text](</assets/img/Blazor Web Api/28.10.2023_12.04.03_REC.png>)
+### Buat model Dtos
+Buat file berikut pada Shop.Models project, folder Dtos
+<div class="row mt-3">
+   {% include figure.html path="assets/img/Blazor Web Api/28.10.2023_12.04.03_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
 
 `CartItemDto.cs`
 ```c#
@@ -89,7 +95,10 @@ namespace ShopCart.Models.Dtos
 }
 ```
 
-3. Membuat folder Repository untuk menggunakan repository pattern, buat file di dalam folder tersebut, file interface IProductRepository dan file ProductRepository untuk meng-implementasikan interface .
+
+## Buat folder Repository
+{:data-toc-text="Buat folder Repository"}
+Membuat folder Repository untuk menggunakan repository pattern, buat file di dalam folder tersebut, file interface IProductRepository dan file ProductRepository untuk meng-implementasikan interface .
    
 `IProductRepository.cs`
 ```c#
@@ -148,11 +157,15 @@ namespace ShopCart.Api.Repositories
     }
 }
 ```
-4. Tambahkan kode independency injection berikut pada file Program.cs agar repository bisa digunakan.
+### Tambahkan kode independency injection
+Tambahkan kode berikut pada file Program.cs agar repository bisa digunakan.
 `builder.Services.AddScoped<IProductRepository, ProductRepository>();`
-![Alt text](</assets/img/Blazor Web Api/29.10.2023_00.41.17_REC.png>)
+<div class="row mt-3">
+   {% include figure.html path="assets/img/Blazor Web Api/29.10.2023_00.41.17_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
 
-5. Buat Folder Extensions, dan didalamnya buat file DtoConversions.cs, file ini digunakan untuk konversi hasil data dari database ke Swagger UI.
+## Buat DtoConversions
+Buat Folder Extensions, dan didalamnya buat file DtoConversions.cs, file ini digunakan untuk konversi hasil data dari database ke Swagger UI.
 
 `DtoConversions.cs`
 ```c#
@@ -186,7 +199,8 @@ namespace ShopCart.Api.Extensions
 }
 ```
 
-6. Buat file ProductController untuk memanggil repository yang sudah dibuat.
+## Buat ProductController
+Buat file ProductController untuk memanggil repository yang sudah dibuat.
 `ProductController.cs`
 ```c#
 using Microsoft.AspNetCore.Http;
@@ -238,13 +252,21 @@ namespace ShopCart.Api.Controllers
 
 ```  
 
-7. Jalankan Project Solution pilih Menu Debug -> Start Debugging atau dengan shortcut F5 pada keyboard, maka akan tampil halaman Swagger, Product dan Method Get /api/Product, karena sebelumnya sudah dibuat pada Step 6, file ProductController.cs 
-![Alt text](</assets/img/Blazor Web Api/29.10.2023_01.14.51_REC.png>)
+## Run Project
+{:data-toc-text="Run Project"}
+Jalankan project solution pilih Menu Debug -> Start Debugging atau dengan shortcut F5 pada keyboard, maka akan tampil halaman Swagger, Product dan Method Get /api/Product, karena sebelumnya sudah dibuat pada Step 6, file ProductController.cs 
+<div class="row mt-3">
+   {% include figure.html path="assets/img/Blazor Web Api/29.10.2023_01.14.51_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
 
+### Execute Get /api/Product
 Coba jalankan method Get /api/Product dengan cara, Pilih Try it out -> Pilih Execute,
 maka data product akan tampil <br>
+<div class="row mt-3">
+   {% include figure.html path="assets/img/Blazor Web Api/29.10.2023_01.24.41_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
 
-![Alt text](</assets/img/Blazor Web Api/29.10.2023_01.24.41_REC.png>)
-
-Struktur Project Solution <br>
-![Alt text](</assets/img/Blazor Web Api/29.10.2023_01.30.56_REC.png>)
+## Struktur Project Solution <br>
+<div class="row mt-3">
+   {% include figure.html path="assets/img/Blazor Web Api/29.10.2023_01.30.56_REC.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
